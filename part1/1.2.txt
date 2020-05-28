@@ -1,0 +1,122 @@
+Script started on Thu May 28 14:42:28 2020
+]0;~/Work/misc/devops-with-docker/part1
+[0m[27m[24m[J[39m14:42:30 [34m~/Work/misc/devops-with-docker/part1[39m
+[35m❯[39m [K[?1h=[A[0m[27m[24m[J[39m14:42:30 [34m~/Work/misc/devops-with-docker/part1[39m
+[35m❯[39m [K[?2004h[A[0m[27m[24m[J[39m14:42:30 [34m~/Work/misc/devops-with-docker/part1[39m [38;5;159mmaster[39m
+[35m❯[39m [K[A[0m[27m[24m[J[39m14:42:31 [34m~/Work/misc/devops-with-docker/part1[39m [38;5;159mmaster*[39m
+[35m❯[39m [K[32md[39m[33md[33mo[39m[1m[31md[1m[31mo[1m[31mc[0m[39m[1m[31mc[1m[31mk[0m[39m[1m[31mk[1m[31me[0m[39m[0m[32md[0m[32mo[0m[32mc[0m[32mk[0m[32me[32mr[39m ps -as[?1l>[?2004l[A[0m[27m[24m[J[39m14:42:44 [34m~/Work/misc/devops-with-docker/part1[39m [38;5;159mmaster*[39m
+[35m❯[39m [32mdocker[39m ps -as[K
+]0;part1: docker ps -asCONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                      PORTS               NAMES                    SIZE
+08da593cb2d9        nginx               "nginx -g 'daemon of…"   10 minutes ago      Up 10 minutes               80/tcp              nervous_rhodes           2B (virtual 127MB)
+54921a70a157        nginx               "nginx -g 'daemon of…"   10 minutes ago      Exited (0) 9 minutes ago                        magical_pike             0B (virtual 127MB)
+935dd5629410        nginx               "nginx -g 'daemon of…"   10 minutes ago      Exited (0) 9 minutes ago                        reverent_chandrasekhar   0B (virtual 127MB)
+739327e0287a        nginx               "nginx -g 'daemon of…"   15 minutes ago      Exited (0) 15 minutes ago                       nostalgic_poitras        0B (virtual 127MB)
+]0;~/Work/misc/devops-with-docker/part1
+[0m[27m[24m[J[39m14:42:44 [34m~/Work/misc/devops-with-docker/part1[39m [38;5;159mmaster*[39m
+[35m❯[39m [K[?1h=[A[0m[27m[24m[J[39m14:42:44 [34m~/Work/misc/devops-with-docker/part1[39m [38;5;159mmaster*[39m
+[35m❯[39m [K[?2004h[32md[39m[33md[33mo[39m[1m[31md[1m[31mo[1m[31mc[0m[39m[1m[31mc[1m[31mk[0m[39m[1m[31mk[1m[31me[0m[39m[0m[32md[0m[32mo[0m[32mc[0m[32mk[0m[32me[32mr[39m images[?1l>[?2004l[A[0m[27m[24m[J[39m14:42:51 [34m~/Work/misc/devops-with-docker/part1[39m [38;5;159mmaster*[39m
+[35m❯[39m [32mdocker[39m images[K
+]0;part1: docker imagesREPOSITORY               TAG                 IMAGE ID            CREATED             SIZE
+nginx                    latest              9beeba249f3e        12 days ago         127MB
+timiscoding/cheers2019   latest              7fc40f16176e        4 months ago        4.01MB
+<none>                   <none>              6b7e0edfe7b0        4 months ago        356MB
+golang                   1.11-alpine         e116d2efa2ab        9 months ago        312MB
+redislabs/rejson         latest              cde926590de4        15 months ago       95.4MB
+andresriancho/w3af       latest              f7b0c70471c6        4 years ago         683MB
+]0;~/Work/misc/devops-with-docker/part1
+[0m[27m[24m[J[39m14:42:51 [34m~/Work/misc/devops-with-docker/part1[39m [38;5;159mmaster*[39m
+[35m❯[39m [K[?1h=[A[0m[27m[24m[J[39m14:42:51 [34m~/Work/misc/devops-with-docker/part1[39m [38;5;159mmaster*[39m
+[35m❯[39m [K[?2004h[32md[39m[33md[33mo[39m[1m[31md[1m[31mo[1m[31mc[0m[39m[1m[31mc[1m[31mk[0m[39m[1m[31mk[1m[31me[0m[39m[0m[32md[0m[32mo[0m[32mc[0m[32mk[0m[32me[32mr[39m prune[7me[27m[7mn[27m[27me[7mu[27m[27mn[7mr[27m[27mu[7mp[27m[27mr[27mp[7mr[27m[27mr[7mu[27m[27mu[7mn[27m[27mn[7me[27m[27me     container ls -a[?1l>[?2004l[A[0m[27m[24m[J[39m14:44:16 [34m~/Work/misc/devops-with-docker/part1[39m [38;5;159mmaster*[39m
+[35m❯[39m [32mdocker[39m container ls -a[K
+]0;part1: docker container ls -aCONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                      PORTS               NAMES
+08da593cb2d9        nginx               "nginx -g 'daemon of…"   11 minutes ago      Up 11 minutes               80/tcp              nervous_rhodes
+54921a70a157        nginx               "nginx -g 'daemon of…"   11 minutes ago      Exited (0) 11 minutes ago                       magical_pike
+935dd5629410        nginx               "nginx -g 'daemon of…"   11 minutes ago      Exited (0) 11 minutes ago                       reverent_chandrasekhar
+739327e0287a        nginx               "nginx -g 'daemon of…"   17 minutes ago      Exited (0) 16 minutes ago                       nostalgic_poitras
+]0;~/Work/misc/devops-with-docker/part1
+[0m[27m[24m[J[39m14:44:16 [34m~/Work/misc/devops-with-docker/part1[39m [38;5;159mmaster*[39m
+[35m❯[39m [K[?1h=[A[0m[27m[24m[J[39m14:44:16 [34m~/Work/misc/devops-with-docker/part1[39m [38;5;159mmaster*[39m
+[35m❯[39m [K[?2004h[32md[39m[33md[33mo[39m[1m[31md[1m[31mo[1m[31mc[0m[39m[1m[31mc[1m[31mk[0m[39m[1m[31mk[1m[31me[0m[39m[0m[32md[0m[32mo[0m[32mc[0m[32mk[0m[32me[32mr[39m container prune     rm   st  prune[?1l>[?2004l[A[0m[27m[24m[J[39m14:44:52 [34m~/Work/misc/devops-with-docker/part1[39m [38;5;159mmaster*[39m
+[35m❯[39m [32mdocker[39m container prune[K
+]0;part1: docker container pruneWARNING! This will remove all stopped containers.
+Are you sure you want to continue? [y/N] y
+Deleted Containers:
+54921a70a157715a847022fedd9fe42e32abda28bdc27d4966a7e420c2b3f5ee
+935dd562941098ea57a87487a9f471f1dd187061d6f9e1a7514679e86e6ed0ab
+739327e0287ab7015435d1bb55c6ade0591d249745f19a2eff2bad4be3fd7a16
+
+Total reclaimed space: 0B
+]0;~/Work/misc/devops-with-docker/part1
+[0m[27m[24m[J[39m14:44:55 [34m~/Work/misc/devops-with-docker/part1[39m [38;5;159mmaster*[39m
+[35m❯[39m [K[?1h=[A[0m[27m[24m[J[39m14:44:55 [34m~/Work/misc/devops-with-docker/part1[39m [38;5;159mmaster*[39m
+[35m❯[39m [K[?2004h[32md[39m[33md[33mo[39m[1m[31md[1m[31mo[1m[31mc[0m[39m[1m[31mc[1m[31mk[0m[39m[1m[31mk[1m[31me[0m[39m[0m[32md[0m[32mo[0m[32mc[0m[32mk[0m[32me[32mr[39m container -l  ls -a[?1l>[?2004l[A[0m[27m[24m[J[39m14:45:05 [34m~/Work/misc/devops-with-docker/part1[39m [38;5;159mmaster*[39m
+[35m❯[39m [32mdocker[39m container ls -a[K
+]0;part1: docker container ls -aCONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS               NAMES
+08da593cb2d9        nginx               "nginx -g 'daemon of…"   12 minutes ago      Up 12 minutes       80/tcp              nervous_rhodes
+]0;~/Work/misc/devops-with-docker/part1
+[0m[27m[24m[J[39m14:45:05 [34m~/Work/misc/devops-with-docker/part1[39m [38;5;159mmaster*[39m
+[35m❯[39m [K[?1h=[A[0m[27m[24m[J[39m14:45:05 [34m~/Work/misc/devops-with-docker/part1[39m [38;5;159mmaster*[39m
+[35m❯[39m [K[?2004h[32md[39m[33md[33mo[39m[1m[31md[1m[31mo[1m[31mc[0m[39m[1m[31mc[1m[31mk[0m[39m[1m[31mk[1m[31me[0m[39m[0m[32md[0m[32mo[0m[32mc[0m[32mk[0m[32me[32mr[39m container ds  stop 08[?1l>[?2004l[A[0m[27m[24m[J[39m14:45:17 [34m~/Work/misc/devops-with-docker/part1[39m [38;5;159mmaster*[39m
+[35m❯[39m [32mdocker[39m container stop 08[K
+]0;part1: docker container stop 0808
+]0;~/Work/misc/devops-with-docker/part1
+[0m[27m[24m[J[39m14:45:17 [34m~/Work/misc/devops-with-docker/part1[39m [38;5;159mmaster*[39m
+[35m❯[39m [K[?1h=[A[0m[27m[24m[J[39m14:45:17 [34m~/Work/misc/devops-with-docker/part1[39m [38;5;159mmaster*[39m
+[35m❯[39m [K[?2004h[32md[39m[33md[33mo[39m[1m[31md[1m[31mo[1m[31mc[0m[39m[1m[31mc[1m[31mk[0m[39m[1m[31mk[1m[31me[0m[39m[0m[32md[0m[32mo[0m[32mc[0m[32mk[0m[32me[32mr[39m rm 08[?1l>[?2004l[A[0m[27m[24m[J[39m14:45:25 [34m~/Work/misc/devops-with-docker/part1[39m [38;5;159mmaster*[39m
+[35m❯[39m [32mdocker[39m rm 08[K
+]0;part1: docker rm 0808
+]0;~/Work/misc/devops-with-docker/part1
+[0m[27m[24m[J[39m14:45:25 [34m~/Work/misc/devops-with-docker/part1[39m [38;5;159mmaster*[39m
+[35m❯[39m [K[?1h=[A[0m[27m[24m[J[39m14:45:25 [34m~/Work/misc/devops-with-docker/part1[39m [38;5;159mmaster*[39m
+[35m❯[39m [K[?2004h[32mdocker[39m rm 08container stop 08ls -a  [?1l>[?2004l[A[0m[27m[24m[J[39m14:45:29 [34m~/Work/misc/devops-with-docker/part1[39m [38;5;159mmaster*[39m
+[35m❯[39m [32mdocker[39m container ls -a[K
+]0;part1: docker container ls -aCONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+]0;~/Work/misc/devops-with-docker/part1
+[0m[27m[24m[J[39m14:45:29 [34m~/Work/misc/devops-with-docker/part1[39m [38;5;159mmaster*[39m
+[35m❯[39m [K[?1h=[A[0m[27m[24m[J[39m14:45:29 [34m~/Work/misc/devops-with-docker/part1[39m [38;5;159mmaster*[39m
+[35m❯[39m [K[?2004h[32md[39m[33md[33mo[39m[1m[31md[1m[31mo[1m[31mc[0m[39m[1m[31mc[1m[31mk[0m[39m[1m[31mk[1m[31me[0m[39m[0m[32md[0m[32mo[0m[32mc[0m[32mk[0m[32me[32mr[39m ps -as[?1l>[?2004l[A[0m[27m[24m[J[39m14:45:38 [34m~/Work/misc/devops-with-docker/part1[39m [38;5;159mmaster*[39m
+[35m❯[39m [32mdocker[39m ps -as[K
+]0;part1: docker ps -asCONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES               SIZE
+]0;~/Work/misc/devops-with-docker/part1
+[0m[27m[24m[J[39m14:45:38 [34m~/Work/misc/devops-with-docker/part1[39m [31mmaster*[39m
+[35m❯[39m [K[?1h=[A[0m[27m[24m[J[39m14:45:38 [34m~/Work/misc/devops-with-docker/part1[39m [31mmaster*[39m
+[35m❯[39m [K[?2004h[32md[39m[33md[33mo[39m[1m[31md[1m[31mo[1m[31mc[0m[39m[1m[31mc[1m[31mk[0m[39m[1m[31mk[1m[31me[0m[39m[0m[32md[0m[32mo[0m[32mc[0m[32mk[0m[32me[32mr[39m images[?1l>[?2004l[A[0m[27m[24m[J[39m14:48:14 [34m~/Work/misc/devops-with-docker/part1[39m [31mmaster*[39m
+[35m❯[39m [32mdocker[39m images[K
+]0;part1: docker imagesREPOSITORY               TAG                 IMAGE ID            CREATED             SIZE
+nginx                    latest              9beeba249f3e        12 days ago         127MB
+timiscoding/cheers2019   latest              7fc40f16176e        4 months ago        4.01MB
+<none>                   <none>              6b7e0edfe7b0        4 months ago        356MB
+golang                   1.11-alpine         e116d2efa2ab        9 months ago        312MB
+redislabs/rejson         latest              cde926590de4        15 months ago       95.4MB
+andresriancho/w3af       latest              f7b0c70471c6        4 years ago         683MB
+]0;~/Work/misc/devops-with-docker/part1
+[0m[27m[24m[J[39m14:48:14 [34m~/Work/misc/devops-with-docker/part1[39m [31mmaster*[39m
+[35m❯[39m [K[?1h=[A[0m[27m[24m[J[39m14:48:14 [34m~/Work/misc/devops-with-docker/part1[39m [31mmaster*[39m
+[35m❯[39m [K[?2004h[A[0m[27m[24m[J[39m14:48:15 [34m~/Work/misc/devops-with-docker/part1[39m [31mmaster*[39m
+[35m❯[39m [K[32md[39m[33md[33mo[39m[1m[31md[1m[31mo[1m[31mc[0m[39m[1m[31mc[1m[31mk[0m[39m[1m[31mk[1m[31me[0m[39m[0m[32md[0m[32mo[0m[32mc[0m[32mk[0m[32me[32mr[39m rmi nginx[?1l>[?2004l[A[0m[27m[24m[J[39m14:48:22 [34m~/Work/misc/devops-with-docker/part1[39m [31mmaster*[39m
+[35m❯[39m [32mdocker[39m rmi nginx[K
+]0;part1: docker rmi nginxUntagged: nginx:latest
+Untagged: nginx@sha256:30dfa439718a17baafefadf16c5e7c9d0a1cde97b4fd84f63b69e13513be7097
+Deleted: sha256:9beeba249f3ee158d3e495a6ac25c5667ae2de8a43ac2a8bfd2bf687a58c06c9
+Deleted: sha256:8fb6373b4cca3383756d7fd7843dd92f95827e5f2913609e09a9621dcddb3752
+Deleted: sha256:8b09841626797a03a9fe5e73aa38aeacf9ff0ce85a3004236ff35234eec3b35c
+Deleted: sha256:ffc9b21953f4cd7956cdf532a5db04ff0a2daa7475ad796f1bad58cfbaf77a07
+]0;~/Work/misc/devops-with-docker/part1
+[0m[27m[24m[J[39m14:48:22 [34m~/Work/misc/devops-with-docker/part1[39m [31mmaster*[39m
+[35m❯[39m [K[?1h=[A[0m[27m[24m[J[39m14:48:22 [34m~/Work/misc/devops-with-docker/part1[39m [31mmaster*[39m
+[35m❯[39m [K[?2004h[32md[39m[33md[33mo[39m[1m[31md[1m[31mo[1m[31mc[0m[39m[1m[31mc[1m[31mk[0m[39m[1m[31mk[1m[31me[0m[39m[0m[32md[0m[32mo[0m[32mc[0m[32mk[0m[32me[32mr[39m images[?1l>[?2004l[A[0m[27m[24m[J[39m14:48:26 [34m~/Work/misc/devops-with-docker/part1[39m [31mmaster*[39m
+[35m❯[39m [32mdocker[39m images[K
+]0;part1: docker imagesREPOSITORY               TAG                 IMAGE ID            CREATED             SIZE
+timiscoding/cheers2019   latest              7fc40f16176e        4 months ago        4.01MB
+<none>                   <none>              6b7e0edfe7b0        4 months ago        356MB
+golang                   1.11-alpine         e116d2efa2ab        9 months ago        312MB
+redislabs/rejson         latest              cde926590de4        15 months ago       95.4MB
+andresriancho/w3af       latest              f7b0c70471c6        4 years ago         683MB
+]0;~/Work/misc/devops-with-docker/part1
+[0m[27m[24m[J[39m14:48:26 [34m~/Work/misc/devops-with-docker/part1[39m [31mmaster*[39m
+[35m❯[39m [K[?1h=[A[0m[27m[24m[J[39m14:48:26 [34m~/Work/misc/devops-with-docker/part1[39m [31mmaster*[39m
+[35m❯[39m [K[?2004h[A[0m[27m[24m[J[39m14:48:27 [34m~/Work/misc/devops-with-docker/part1[39m [31mmaster*[39m
+[35m❯[39m [K[32me[39m[32me[32mx[39m[1m[31me[1m[31mx[1m[31mi[0m[39m[0m[32me[0m[32mx[0m[32mi[32mt[39m[?1l>[?2004l[A[0m[27m[24m[J[39m14:48:40 [34m~/Work/misc/devops-with-docker/part1[39m [31mmaster*[39m
+[35m❯[39m [32mexit[39m[K
+]0;part1: exit
+Script done on Thu May 28 14:48:40 2020

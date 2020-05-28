@@ -1,0 +1,4 @@
+docker run -d devopsdockeruh/exec_bash_exercise
+docker exec -it ce bash
+tail -f ./logs.txt
+"Docker is easy"
