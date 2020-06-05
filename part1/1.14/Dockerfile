@@ -1,14 +1,13 @@
-# image size 391MB
+# image size 361MB
 FROM ruby:2.6.0-alpine
 
 WORKDIR /rails-example-project
 RUN apk add --update \
-  git \
   build-base \
   sqlite-dev \
   nodejs \
   npm
-RUN git clone https://github.com/docker-hy/rails-example-project.git .
+COPY . .
 # update gemfile to install tzinfo-data for alpine, not just windows
 RUN sed --in-place='' "s/\(gem 'tzinfo-data', platforms.*\)]/\1, :ruby]/" Gemfile
 RUN bundle update && bundle install
@@ -16,4 +15,5 @@ RUN bundle update && bundle install
 ENV RAILS_ENV=production SECRET_KEY_BASE="$(rails secret)"
 RUN rails db:migrate
 RUN rake assets:precompile
+EXPOSE 3000
 CMD ["rails", "s", "-e", "production"]
