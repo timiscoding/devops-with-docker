@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  youtube-dl-ubuntu:
+    image: timiscoding/youtube-dl
+    build: .
+    volumes:
+      - .:/mydir
+    container_name: youtube-dl

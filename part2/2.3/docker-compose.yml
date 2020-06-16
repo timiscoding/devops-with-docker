@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: fe.Dockerfile
+      args:
+        apiurl: http://localhost:8000
+    image: frontend-example-docker
+    ports:
+      - 5000:5000
+  backend:
+    build:
+      context: .
+      dockerfile: be.Dockerfile
+    image: backend-example-docker
+    ports:
+      - 8000:8000
+    volumes:
+      - ./logs.txt:/backend-example-docker/logs.txt
+    environment:
+      - FRONT_URL=http://localhost:5000
