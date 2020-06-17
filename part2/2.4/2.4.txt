@@ -1,0 +1,13 @@
+# https://github.com/docker-hy/scaling-exercise
+# The calculator frontend sends 10 requests to the compute backend and the challenge
+# is the get all the results back before the 30s timer runs out.
+# The problem is that the backend takes anywhere between 3-4s (non-inclusive) to compute
+# each calculation so with 1 compute backend, we'll never get the results back to the client in time.
+
+# Solution: lets add more compute backends so that the load balancer will automatically
+# distribute all requests evenly between the backends. Scaling up to 2 backends is enough
+# since the requirement is 10 requests and 2 servers returning a response in 4s can each
+# complete 5 requests in parallel within 20s. That leaves 10s for any network/computing overhead.
+# In my tests on a locally hosted machine, test passed in 22s
+
+docker-compose up --scale compute=2
