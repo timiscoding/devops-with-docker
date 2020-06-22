@@ -1,3 +1,9 @@
 [submodule "part2/2.4/scaling-exercise"]
 	path = part2/2.4/scaling-exercise
 	url = https://github.com/docker-hy/scaling-exercise
+[submodule "part2/2.5/backend-example-docker"]
+	path = part2/2.5/backend-example-docker
+	url = git@github.com:docker-hy/backend-example-docker.git
+[submodule "part2/2.5/frontend-example-docker"]
+	path = part2/2.5/frontend-example-docker
+	url = git@github.com:docker-hy/frontend-example-docker.git

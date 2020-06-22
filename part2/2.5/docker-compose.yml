@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: be.Dockerfile
+      args:
+        fronturl: http://localhost:5000
+    image: backend
+    ports:
+      - "8000:8000"
+    environment:
+      REDIS: redis
+  frontend:
+    build:
+      context: .
+      dockerfile: fe.Dockerfile
+      args:
+        apiurl: http://localhost:8000
+    image: frontend
+    ports:
+      - "5000:5000"
+  redis:
+    image: redis:latest
+    ports:
+      - "6379"
+
