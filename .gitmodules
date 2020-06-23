@@ -13,3 +13,6 @@
 [submodule "part2/2.6/frontend-example-docker"]
 	path = part2/2.6/frontend-example-docker
 	url = git@github.com:docker-hy/frontend-example-docker.git
+[submodule "part2/2.7/ml-kurkkumopo-training"]
+	path = part2/2.7/ml-kurkkumopo-training
+	url = git@github.com:docker-hy/ml-kurkkumopo-training.git
