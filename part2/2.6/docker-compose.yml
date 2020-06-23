@@ -1,0 +1,43 @@
+version: '3'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: be.Dockerfile
+      args:
+        fronturl: http://localhost:5000
+    image: backend
+    ports:
+      - "8000:8000"
+    environment:
+      REDIS: redis
+      DB_USERNAME: postgres
+      DB_PASSWORD: example
+      DB_HOST: postgres
+    depends_on:
+      - redis
+      - postgres
+    container_name: backend
+  frontend:
+    build:
+      context: .
+      dockerfile: fe.Dockerfile
+      args:
+        apiurl: http://localhost:8000
+    image: frontend
+    ports:
+      - "5000:5000"
+    depends_on:
+      - backend
+    container_name: frontend
+  redis:
+    image: redis:latest
+    ports:
+      - "6379"
+    container_name: redis
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: example
+    container_name: postgres

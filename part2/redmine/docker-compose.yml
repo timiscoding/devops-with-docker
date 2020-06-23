@@ -1,0 +1,36 @@
+version: '3.5'
+
+services:
+  db:
+    image: postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_PASSWORD: example
+    container_name: db_redmine
+    # explicitly create a named volumed called database. Must declare also in top level
+    # volumes key below. This can be ommitted but an anonymous persistent volume will
+    # be created instead. Use 'docker volume ls' to see all volumes.
+    volumes:
+      - database:/var/lib/postgresql/data
+  redmine:
+    image: redmine
+    environment:
+      - REDMINE_DB_POSTGRES=db
+      - REDMINE_DB_PASSWORD=example
+    ports:
+      - "9999:3000"
+    volumes:
+      - files:/usr/src/redmine/files
+    depends_on:
+      - db
+  adminer:
+    image: adminer
+    restart: always
+    environment:
+      - ADMINER_DESIGN=galkaev
+    ports:
+      - 8083:8080
+
+volumes:
+  database:
+  files:

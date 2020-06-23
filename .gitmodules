@@ -7,3 +7,9 @@
 [submodule "part2/2.5/frontend-example-docker"]
 	path = part2/2.5/frontend-example-docker
 	url = git@github.com:docker-hy/frontend-example-docker.git
+[submodule "part2/2.6/backend-example-docker"]
+	path = part2/2.6/backend-example-docker
+	url = git@github.com:docker-hy/backend-example-docker.git
+[submodule "part2/2.6/frontend-example-docker"]
+	path = part2/2.6/frontend-example-docker
+	url = git@github.com:docker-hy/frontend-example-docker.git
