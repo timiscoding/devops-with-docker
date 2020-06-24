@@ -1,0 +1,56 @@
+version: '3'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: be.Dockerfile
+      args:
+        fronturl: http://frontend:5000
+    image: backend
+    ports:
+      - "8000"
+    environment:
+      REDIS: redis
+      DB_USERNAME: postgres
+      DB_PASSWORD: example
+      DB_HOST: postgres
+    depends_on:
+      - redis
+      - postgres
+    container_name: 2-8-backend
+  frontend:
+    build:
+      context: .
+      dockerfile: fe.Dockerfile
+    image: frontend
+    ports:
+      - "5000"
+    depends_on:
+      - backend
+    container_name: 2-8-frontend
+  redis:
+    image: redis:latest
+    ports:
+      - "6379"
+    container_name: 2-8-redis
+    volumes:
+      - ./redis:/data
+    command: ["redis-server", "--appendonly", "yes"]
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: example
+    container_name: 2-8-postgres
+    volumes:
+      - ./database:/var/lib/postgresql/data
+  nginx:
+    image: nginx
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - "80:80"
+    container_name: 2-8-nginx
+    depends_on:
+      - backend
+      - frontend
