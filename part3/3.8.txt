@@ -1,3 +1,0 @@
-Kubernetes cluster diagram at
-
-https://drive.google.com/file/d/1czSRgP71Ghn641k6DLxI409nbouKvazZ/view?usp=sharing
