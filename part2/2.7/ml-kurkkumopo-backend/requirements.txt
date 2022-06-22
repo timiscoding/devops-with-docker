@@ -1,4 +1,4 @@
-numpy==1.14.5
+numpy==1.22.0
 flask==1.0.2
 python-dotenv==0.9.1
 keras==2.2.4
